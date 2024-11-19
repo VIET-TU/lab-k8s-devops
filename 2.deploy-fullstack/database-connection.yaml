@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ecommerce-backend-database-connection
+  namespace: ecommerce
+type: Opaque
+stringData:
+  MARIADB_HOST: "192.168.254.114"
+  MARIADB_DB: "full-stack-ecommerce"
+  MARIADB_PORT: '3306'
+  MARIADB_USERNAME: "ecommerceapp"
+  MARIADB_PASSWORD: "StrongPa55WorD"

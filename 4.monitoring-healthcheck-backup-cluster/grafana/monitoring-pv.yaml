@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: monitoring-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    path: /database/monitoring
+    server: 192.168.254.114
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: nfs-storage
+  
